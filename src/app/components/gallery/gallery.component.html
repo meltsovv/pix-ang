@@ -1,0 +1,52 @@
+<div id="blur">
+  <section class="album blur"  id="album1" >
+    <div class="border_right"></div>
+    <div class="border_left"></div>
+    <div class="flexbox">
+        <div class="items" *ngFor="let img of imgs[countPage]" >
+            <img src="../../../assets/img/photos/{{img.linkImg}}"  (click)="openSlider(imgs[countPage].indexOf(img),countPage)"
+            class="size_photo">
+            <div class="desct"><a href="" class="name_photo">{{img.photoTitle}}</a><span class="like"><i class="far fa-heart" (click)="like(img.idPhoto,countPage)"></i><span class="like_count">{{img.likeCount}}</span><i class="far fa-star" (click)="save(img.idPhoto,countPage)"></i><span class="save_count">{{img.saveCount}}</span></span></div>
+        </div>
+    </div>
+<div class="pageSlide" >
+    <a id="next" (click)="next(+1)">Далі<i class="fas fa-forward"></i></a>
+    <a id="back" (click)="next(-1)"><i class="fas fa-backward"></i>Назад</a>
+</div>
+<div id="slider" *ngIf = "slider">
+    <div class="close" ><a (click)="closeSlider()"><i class="fas fa-times" ></i></a></div>
+    <div class="inside">
+      <img src="../../../assets/img/photos/{{imgs[countPage][idP].linkImg}}" alt="" id="photo">
+    </div>
+    <div class="right">
+      <div class="profile">
+        <div class="photo_profile"></div>
+        <div class="userName"><a href=""><span id="userName">Meltsovv</span> / <span id="userCount">40</span> фото</a></div>
+      </div>
+      <div class="like_anim">    
+        <a  id="like_anim"><i class="far fa-heart"></i>like</a>
+      </div>
+      <div class="download">
+        <a download  id="download"><i class="fas fa-cloud-download-alt"></i>Download</a>
+      </div>
+      <div  id="info1">
+        <p><i class="fas fa-camera"></i> <span calss="camera">Xiaomi Redmi 5 Plus</span></p>
+        <p class="lens">- - -</p>
+        <p class="setings">· ƒ/2.2 · 1/125s · ISO 368</p>
+        <p>Тип зображення <span class="type">JPEG</span></p>
+        <p>Розмір  <span class="size">4032×3016</span></p>
+        <p>Створена  <span class="date">05 липня 2019 р</span></p>
+        <p>Категория <span class="type">Природа</span></p>
+        <p>Перегляди <span class="countWath">0</span></p>
+        <p>Кількість скачувань <span class="countDownload">0</span></p>
+      </div>
+      
+      <div class="arrow_count">
+        <a class="prev" (click)="plusSlide(-1)"><i class="fas fa-arrow-circle-left"></i></a>
+        <div class="countText"><span id="count">{{idP+1}}</span>/{{imgs[countPage].length}}</div>
+        <a class="next" (click)="plusSlide(+1)"><i class="fas fa-arrow-circle-right"></i></a>
+      </div>
+    </div>
+  </div>
+</section>
+</div>

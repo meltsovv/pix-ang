@@ -1,0 +1,89 @@
+<div class="overlay_sign js-overlay_sign-campaign" *ngIf ="registr">
+  <div class="popup_sign_up js-popup_sign-campaign">
+    <span class="sign_log">
+      <p href="#" class="popup_sign_active">Реєстрація</p>
+      <p href="#" class="popup_log_notactive js-button_log-campaign" (click)="openLogin()">Вхід</p>
+    </span>
+    <div class="line"></div>
+    <div class="input">
+      <p class="username_p">Введіть своє ім'я</p>
+      <input type="text" class="username" placeholder="Username">
+      <p class="email_p">Введіть Email</p>
+      <input type="email" class="email" placeholder="Email">
+      <p class="password_p">Придумайте пароль</p>
+      <input type="password" class="password" placeholder="Password">
+      <input type="submit" class="sign_submit" value ="Реєстрація">
+    </div>
+    <div class="line1"></div>
+
+    <div class="social">
+      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#" class="google"><i class="fab fa-google"></i> Google</a>
+    </div>
+    <div class="close_popup js-close_sign-campaign" (click) = "closePopup()"></div>
+  </div>
+</div>
+
+
+
+
+<div class="overlay_log js-overlay_log-campaign" *ngIf="login">
+  <div class="popup_login js-popup_log-campaign">
+    <span class="sign_log">
+      <p href="#" class="popup_sign_notactive js-button_sign-campaign" (click)="openRegistr()">Реєстрація</p>
+      <p href="#" class="popup_log_active ">Вхід</p>
+    </span>
+    <div class="line"></div>
+    <div class="input">
+      <p class="email_p">Введіть Email</p>
+      <input type="email" class="email" placeholder="Email">
+      <p class="password_p">Введіть пароль</p>
+      <input type="password" class="password" placeholder="Password">
+      <input type="submit" class="sign_submit" value ="Вхід">
+    </div>
+    <div class="line1"></div>
+
+    <div class="social">
+      <a href="#" class="facebook"><i class="fab fa-facebook-f"></i> Facebook</a>
+      <a href="#" class="google"><i class="fab fa-google"></i> Google</a>
+    </div>
+    <div class="close_popup js-close_log-campaign" (click) = "closePopup()"></div>
+  </div>
+</div>
+<header class="header">
+    <div class="conteiner_header d-flex align-items-center">
+      <a class="logo" routerLink="/"><img src="../../../assets/img/logo.png" alt="PIXUA" ></a>
+      <ul class="menu d-flex">
+        <li class="menu_item">
+          <a routerLink="/gallery">ЗОБРАЖЕННЯ</a>
+        </li>
+        <li class="menu_item">
+          <a >ВІДЕО</a>
+        </li>
+        <li class="menu_item">
+          <a >ІЛЮСТРАЦІЇ</a>
+        </li>
+      </ul>
+      <div class="auth d-flex">
+        <ul class="auth d-flex">
+          <li class="menu_item">
+            <div class="sign_up" (click)="openRegistr()">РЕЄСТРАЦІЯ</div>
+          </li>
+          <li class="menu_item">
+            <div class="log_in" (click)="openLogin()">ВХІД</div>
+          </li>
+          <li class="sub_menu">
+            <a ><i class="fas fa-bars"></i></a>
+            <ul>
+              <li><a routerLink="/gallery">ЗОБРАЖЕННЯ</a></li>
+              <li><a >ВІДЕО</a></li>
+              <li><a >ІЛЮСТРАЦІЇ</a></li>
+              <li><a  class="" (click)="openRegistr()" >РЕЄСТРАЦІЯ</a></li>
+              <li><a  class="" (click)="openLogin()">ВХІД</a></li>
+            </ul>
+          </li>
+        </ul>
+        
+      </div>
+    </div>      
+  </header>

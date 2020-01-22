@@ -1,0 +1,19 @@
+<div class="slide_background blur" id="blur">
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <div class="numbertext">{{count}}/3</div>
+        <img src= "../../../assets/img/{{linkImg}}" style="width: 100%;margin-top: -21px" alt="">
+        <div class="text"> 
+          <p>{{model}}</p> 
+          <p>{{lens}}</p>
+          <p>{{option}}</p>
+          <p>{{typeImg}}</p>
+          <p>{{expansion}}</p>
+          <p>{{date}}
+          </p>
+          </div>
+      </div> 
+      <a class="prev" (click)="plusslides(-1)">-</a>
+      <a class="next" (click)="plusslides(+1)">+</a>
+    </div>
+</div>

@@ -1,0 +1,28 @@
+.footer{
+	background:#2f2f2f;
+
+}
+.d-flex{
+    display: flex;
+}
+.footer_nav {
+	padding:1%;
+}
+.footer li a{
+	margin-right: 20px;
+	color: #fff;
+}
+.footer li a:hover{
+	margin-right: 20px;
+	color: #bbb;
+}
+.footer i{
+	font-size: 24px;
+	justify-content: flex-end;
+	 
+}
+.pixua_2019{
+	font-size: 13px;
+	width: 99%;
+
+}
