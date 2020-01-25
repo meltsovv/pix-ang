@@ -72,7 +72,7 @@
     width: 25%;
     font-weight: 900;
     font-size: 2.4vh;
-    bottom: 8%;
+	top: 80%;
     left: 60%;
     position: absolute;
 
@@ -80,20 +80,10 @@
 
 .more_photos:hover{
 	border: 1px solid #ffbfdf;
-	text-align: center;
-	padding: 5px 22px;
-	border-radius: 100px;
+	
 	color: #000;
 	background: #ffbfdf;
-	text-transform: uppercase;
-	display: block;
-	width: 25%;
-	font-weight: 900;
-	font-size: 2.3vh;
-	bottom: 8%;
-	left: 60%;
-    position: absolute;
-    cursor: pointer;
+	
 }
 .slider {
 	background: rgba(0,0,0,0.1);
@@ -275,6 +265,89 @@
 	background: url(../../../assets/img/sea_topic.jpeg);
 	background-size:cover;
 	background-position-y: bottom;
+}
+@media(max-width: 1440px){
+	.more_photos{
+		width: 32%;
+		left: 50%;
+	}
+	.photograph {
+		width: 104%;
+		height: 100%;
+		right: -2%;
+		bottom: -18%;
+	}
+	.circle{
+		width: 76%;
+		height: 83%;
+		right: 5%;
+	}
+
+}
+@media(max-width: 1024px){
+	.conteiner_content {
+		width: 100%;
+
+		height: 106%;
+	}
+	.slogan{
+		font-size: 2vh;
+	}
+	.more_photos {
+		width: 40%;
+		left: 40%;
+		top: 85%;
+
+	}
+	.search_block {
+
+		top: 70%;
+		left: 5%;
+	}
+	.search{
+		margin-top: 0;
+	}
+	.search_img{
+		margin-top: 1px;
+	}
+	.photograph {
+		width: 66%;
+		height: 100%;
+		right: 16%;
+		bottom: -18%;
+	}
+	.content{
+		height: 40vh;
+	}
+}
+@media(max-width: 1024px){
+	.slider{
+		display: none;
+	}	
+	.conteiner_content {
+		width: 100%;
+		height: 106%;
+	}
+	.offer{
+		width: 100%;
+		border-bottom-right-radius: 100px;
+	}
+	.search_block{
+		top: 66%;
+		left: 28%;
+		width: 44%;
+	}
+	.more_photos {
+		width: 39%;
+		left: 30%;}
+	.slogan{
+		width: 95%;
+		text-align: center;
+	}
+	.search{
+		width: 100%;
+	}
+
 }
 @media screen and (max-width: 800px){
 	

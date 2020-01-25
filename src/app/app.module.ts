@@ -15,8 +15,8 @@ import { from } from 'rxjs';
 const appRoutes: Routes = [
   {path:"", component: SloganComponent},
   {path:"gallery", component: GalleryComponent},
-  {path:"user", component: UserComponent},
-  {path:'user/gallery', component :GalleryComponent}
+  {path:"user", component: UserComponent}
+  // {path:'user/gallery', component :GalleryComponent}
 ]
 @NgModule({
   declarations: [
